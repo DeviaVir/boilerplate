@@ -2,7 +2,7 @@
 - Receive design PSD/examples
 - http://compass.handlino.com/ Use fire.app or compass.app
 - Clone repo
-- Watch base folder
+- Watch base folder with compass or fire
 - Edit index.html & assets/sass/ files
 
 # Included
@@ -16,5 +16,6 @@
 - CSS3 (animations included)
 
 # Me
-[Chase Sillevis](http://chase.sillevis.net/)
-Can I help you out? Shoot me a mail at chase@sillevis.net
+I am [Chase Sillevis](http://chase.sillevis.net/).
+
+Think I can help you out? Shoot me a mail at chase@sillevis.net
