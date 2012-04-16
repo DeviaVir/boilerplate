@@ -2,11 +2,7 @@
 // Sass = http://sass-lang.com
 // Compass = http://compass-style.org
 
-@import compass/css3/background-clip
-@import compass/css3/border-radius
-@import compass/css3/box-shadow
-@import compass/css3/box-sizing
-@import compass/css3/gradient
+@import compass/css3
 
 // `Widths
 //----------------------------------------------------------------------------------------------------
@@ -75,7 +71,7 @@ input[type="button"]
   -webkit-appearance: none
   +border-radius(4px)
   +background-clip(padding-box)
-  background: #ddd image-url('button.png') repeat-x
+  background: #ddd image-url('../img/forms/button.png') repeat-x
   +background-image(linear-gradient(#fff, #ddd))
   border: 1px solid
   border-color: #ddd #bbb #999
@@ -205,7 +201,7 @@ select[size="1"]
   select,
   select[size="0"],
   select[size="1"]
-    background-image: image-url('select_arrow.gif')
+    background-image: image-url('../img/forms/select_arrow.gif')
     background-repeat: no-repeat
     background-position: right center
     padding-right: 20px
@@ -275,7 +271,7 @@ optgroup
 
 .ie6_button,
 * html button
-  background: #ddd image-url('button.png') repeat-x
+  background: #ddd image-url('../img/forms/button.png') repeat-x
   border: 1px solid
   border-color: #ddd #bbb #999
   cursor: pointer
