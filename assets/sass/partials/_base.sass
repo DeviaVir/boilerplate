@@ -13,3 +13,47 @@ $link-hover-color: #06e
 
 // Lists
 $list-left-margin: 40px
+
+@mixin user-select( $var )
+	@if $var == 'none'
+		-ms-user-select: ignore
+		-o-user-select: ignore
+	@else
+		-o-user-select: $var
+		-ms-user-select: $var
+		
+	-webkit-user-select: $var
+	-moz-user-select: $var
+	user-select: $var
+	
+@mixin user-input( $var )
+	-webkit-user-input: $var
+	-moz-user-input: $var
+	-ms-user-input: $var
+	-o-user-input: $var
+	user-input: $var
+
+@mixin font-smoothing( $var )
+	-webkit-font-smoothing: $var
+	-moz-font-smoothing: $var
+	-ms-font-smoothing: $var
+	-o-font-smoothing: $var
+	font-smoothing: $var
+	
+@mixin overflow-scrolling( $var )
+	-webkit-overflow-scrolling: $var
+	-moz-overflow-scrolling: $var
+	-ms-overflow-scrolling: $var
+	-o-overflow-scrolling: $var
+	overflow-scrolling: $var
+	
+@mixin opacity( $var )
+	opacity: $var
+	filter: alpha(opacity $var * 100)
+	
+@mixin transform( $var )
+	-webkit-transform: $var
+	-moz-transform: $var
+	-o-transform: $var
+	-ms-transform: $var
+	transform: $var
