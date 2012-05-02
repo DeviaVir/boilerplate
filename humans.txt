@@ -3,8 +3,6 @@
 
 
 /* TEAM */
-  Etopia
-  
   Frontend: Chase Sillevis
   Site: http://chase.sillevis.net/
   Twitter: @deviavir
