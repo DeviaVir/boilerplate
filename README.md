@@ -7,6 +7,7 @@
 
 # Included
 - [Selectivizr](http://selectivizr.com/)
+- [respond.js](https://github.com/scottjehl/Respond)
 - [Modernizr](http://modernizr.com/)
 - [Formalize](http://formalize.me/)
 - [jQuery](http://jquery.com/)
