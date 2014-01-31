@@ -3,9 +3,99 @@
 =animate($name: fadeIn, $duration: 1s, $delay: .2s, $function: ease, $mode: both)
   +experimental(animation, $name $duration $delay $function $mode)
 
+@mixin animation( $s )
+  -webkit-animation: $s
+  -moz-animation: $s
+  -ms-animation: $s
+  animation: $s
+
+@mixin delay( $s )
+  -webkit-animation-delay: $s
+  -moz-animation-delay: $s
+  -ms-animation-delay: $s
+  animation-delay: $s
+
+@-moz-keyframes sparkle
+  0%
+    background-position: 0 0
+  100%
+    background-position: 0 -64px
+
+@-webkit-keyframes sparkle
+  0%
+    background-position: 0 0
+  100%
+    background-position: 0 -64px
+
+@-ms-keyframes sparkle
+  0%
+    background-position: 0 0
+  100%
+    background-position: 0 -64px
+
+@keyframes sparkle
+  0%
+    background-position: 0 0
+  100%
+    background-position: 0 -64px
+
+@-moz-keyframes grow
+  0%
+    width: 0
+  100%
+    width: 300px
+
+@-webkit-keyframes grow
+  0%
+    width: 0
+  100%
+    width: 390px
+
+@-ms-keyframes grow
+  0%
+    width: 0
+  100%
+    width: 390px
+
+@keyframes grow
+  0%
+    width: 0
+  100%
+    width: 390px
+
+@-moz-keyframes swing
+  0%
+    -moz-transform: rotate(-3deg)
+  50%
+    -moz-transform: rotate(3deg)
+  100%
+    -moz-transform: rotate(-3deg)
+
+@-webkit-keyframes swing
+  0%
+    -webkit-transform: rotate(-3deg)
+  50%
+    -webkit-transform: rotate(3deg)
+  100%
+    -webkit-transform: rotate(-3deg)
+
+@-ms-keyframes swing
+  0%
+    -ms-transform: rotate(-3deg)
+  50%
+    -ms-transform: rotate(3deg)
+  100%
+    -ms-transform: rotate(-3deg)
+
+@keyframes swing
+  0%
+    transform: rotate(-3deg)
+  50%
+    transform: rotate(3deg)
+  100%
+    transform: rotate(-3deg)
 
 //KeyFrame Defaults (pre-made don't edit)
-
 @-webkit-keyframes fadeIn
   0%
     opacity: 0
@@ -1290,434 +1380,6 @@
   100%
     -ms-transform: scale(1) rotate(0)
 
-@-o-keyframes fadeIn
-  0%
-    opacity: 0
-  100%
-    opacity: 1
-
-@-o-keyframes fadeOut
-  0%
-    opacity: 1
-  100%
-    opacity: 0
-
-@-o-keyframes fadeInUp
-  0%
-    opacity: 0
-    transform: translateY(20px)
-  100%
-    opacity: 1
-    transform: translateY(0)
-
-@-o-keyframes fadeOutUp
-  0%
-    opacity: 1
-    transform: translateY(0)
-  100%
-    opacity: 0
-    transform: translateY(-20px)
-
-@-o-keyframes fadeInDown
-  0%
-    opacity: 0
-    transform: translateY(-20px)
-  100%
-    opacity: 1
-    transform: translateY(0)
-
-@-o-keyframes fadeOutDown
-  0%
-    opacity: 1
-    transform: translateY(0)
-  100%
-    opacity: 0
-    transform: translateY(20px)
-
-@-o-keyframes fadeInRight
-  0%
-    opacity: 0
-    transform: translateX(20px)
-  100%
-    opacity: 1
-    transform: translateX(0)
-
-@-o-keyframes fadeOutLeft
-  0%
-    opacity: 1
-    transform: translateX(0)
-  100%
-    opacity: 0
-    transform: translateX(-20px)
-
-@-o-keyframes fadeInLeft
-  0%
-    opacity: 0
-    transform: translateX(-20px)
-  100%
-    opacity: 1
-    transform: translateX(0)
-
-@-o-keyframes fadeOutRight
-  0%
-    opacity: 1
-    transform: translateX(0)
-  100%
-    opacity: 0
-    transform: translateX(20px)
-
-@-o-keyframes fadeInUpBig
-  0%
-    opacity: 0
-    transform: translateY(2000px)
-  100%
-    opacity: 1
-    transform: translateY(0)
-
-@-o-keyframes fadeOutUpBig
-  0%
-    opacity: 1
-    transform: translateY(0)
-  100%
-    opacity: 0
-    transform: translateY(-2000px)
-
-@-o-keyframes fadeInDownBig
-  0%
-    opacity: 0
-    transform: translateY(-2000px)
-  100%
-    opacity: 1
-    transform: translateY(0)
-
-@-o-keyframes fadeOutDownBig
-  0%
-    opacity: 1
-    transform: translateY(0)
-  100%
-    opacity: 0
-    transform: translateY(2000px)
-
-@-o-keyframes fadeInRightBig
-  0%
-    opacity: 0
-    transform: translateX(2000px)
-  100%
-    opacity: 1
-    transform: translateX(0)
-
-@-o-keyframes fadeOutLeftBig
-  0%
-    opacity: 1
-    transform: translateX(0)
-  100%
-    opacity: 0
-    transform: translateX(-2000px)
-
-@-o-keyframes fadeInLeftBig
-  0%
-    opacity: 0
-    transform: translateX(-2000px)
-  100%
-    opacity: 1
-    transform: translateX(0)
-
-@-o-keyframes fadeOutRightBig
-  0%
-    opacity: 1
-    transform: translateX(0)
-  100%
-    opacity: 0
-    transform: translateX(2000px)
-
-@-o-keyframes bounceIn
-  0%
-    opacity: 0
-    transform: scale(0.3)
-  50%
-    opacity: 1
-    transform: scale(1.05)
-  70%
-    transform: scale(0.9)
-  100%
-    transform: scale(1)
-
-@-o-keyframes bounceInDown
-  0%
-    opacity: 0
-    transform: translateY(-2000px)
-  60%
-    opacity: 1
-    transform: translateY(30px)
-  80%
-    transform: translateY(-10px)
-  100%
-    transform: translateY(0)
-
-@-o-keyframes bounceInUp
-  0%
-    opacity: 0
-    transform: translateY(2000px)
-  60%
-    opacity: 1
-    transform: translateY(-30px)
-  80%
-    transform: translateY(10px)
-  100%
-    transform: translateY(0)
-
-@-o-keyframes bounceInRight
-  0%
-    opacity: 0
-    transform: translateX(2000px)
-  60%
-    opacity: 1
-    transform: translateX(-30px)
-  80%
-    transform: translateX(10px)
-  100%
-    transform: translateX(0)
-
-@-o-keyframes bounceInLeft
-  0%
-    opacity: 0
-    transform: translateX(-2000px)
-  60%
-    opacity: 1
-    transform: translateX(30px)
-  80%
-    transform: translateX(-10px)
-  100%
-    transform: translateX(0)
-
-@-o-keyframes bounceOut
-  0%
-    transform: scale(1)
-  25%
-    transform: scale(0.95)
-  50%
-    opacity: 1
-    transform: scale(1.1)
-  100%
-    opacity: 0
-    transform: scale(0.3)
-
-@-o-keyframes bounceOutUp
-  0%
-    transform: translateY(0)
-  20%
-    opacity: 1
-    transform: translateY(20px)
-  100%
-    opacity: 0
-    transform: translateY(-2000px)
-
-@-o-keyframes bounceOutDown
-  0%
-    transform: translateY(0)
-  20%
-    opacity: 1
-    transform: translateY(-20px)
-  100%
-    opacity: 0
-    transform: translateY(2000px)
-
-@-o-keyframes bounceOutLeft
-  0%
-    transform: translateX(0)
-  20%
-    opacity: 1
-    transform: translateX(20px)
-  100%
-    opacity: 0
-    transform: translateX(-2000px)
-
-@-o-keyframes bounceOutRight
-  0%
-    transform: translateX(0)
-  20%
-    opacity: 1
-    transform: translateX(-20px)
-  100%
-    opacity: 0
-    transform: translateX(2000px)
-
-@-o-keyframes flash
-  0%
-    opacity: 1
-  25%
-    opacity: 0
-  50%
-    opacity: 1
-  75%
-    opacity: 0
-  100%
-    opacity: 1
-
-@-o-keyframes bounce
-  0%
-    transform: translateY(0)
-  20%
-    transform: translateY(0)
-  40%
-    transform: translateY(-30px)
-  50%
-    transform: translateY(0)
-  60%
-    transform: translateY(-15px)
-  80%
-    transform: translateY(0)
-  100%
-    transform: translateY(0)
-
-@-o-keyframes shake
-  0%
-    transform: translateX(0)
-  10%
-    transform: translateX(-10px)
-  20%
-    transform: translateX(10px)
-  30%
-    transform: translateX(-10px)
-  40%
-    transform: translateX(10px)
-  50%
-    transform: translateX(-10px)
-  60%
-    transform: translateX(10px)
-  70%
-    transform: translateX(-10px)
-  80%
-    transform: translateX(10px)
-  90%
-    transform: translateX(-10px)
-  100%
-    transform: translateX(0)
-
-@-o-keyframes rotateInDownLeft
-  0%
-    transform-origin: left bottom
-    transform: rotate(-90deg)
-    opacity: 0
-  100%
-    transform-origin: left bottom
-    transform: rotate(0)
-    opacity: 1
-
-@-o-keyframes rotateInUpLeft
-  0%
-    transform-origin: left bottom
-    transform: rotate(90deg)
-    opacity: 0
-  100%
-    transform-origin: left bottom
-    transform: rotate(0)
-    opacity: 1
-
-@-o-keyframes rotateInUpRight
-  0%
-    transform-origin: right bottom
-    transform: rotate(-90deg)
-    opacity: 0
-  100%
-    transform-origin: right bottom
-    transform: rotate(0)
-    opacity: 1
-
-@-o-keyframes rotateInDownRight
-  0%
-    transform-origin: right bottom
-    transform: rotate(90deg)
-    opacity: 0
-  100%
-    transform-origin: right bottom
-    transform: rotate(0)
-    opacity: 1
-
-@-o-keyframes rotateOutDownLeft
-  0%
-    transform-origin: left bottom
-    transform: rotate(0)
-    opacity: 1
-  100%
-    transform-origin: left bottom
-    transform: rotate(90deg)
-    opacity: 0
-
-@-o-keyframes rotateOutUpLeft
-  0%
-    transform-origin: left bottom
-    transform: rotate(0)
-    opacity: 1
-  100%
-    transform-origin: left bottom
-    transform: rotate(-90deg)
-    opacity: 0
-
-@-o-keyframes rotateOutDownRight
-  0%
-    transform-origin: right bottom
-    transform: rotate(0)
-    opacity: 1
-  100%
-    transform-origin: right bottom
-    transform: rotate(-90deg)
-    opacity: 0
-
-@-o-keyframes rotateOutUpRight
-  0%
-    transform-origin: right bottom
-    transform: rotate(0)
-    opacity: 1
-  100%
-    transform-origin: right bottom
-    transform: rotate(90deg)
-    opacity: 0
-
-@-o-keyframes rotateIn
-  0%
-    transform-origin: center center
-    transform: rotate(-200deg)
-    opacity: 0
-  100%
-    transform-origin: center center
-    transform: rotate(0)
-    opacity: 1
-
-@-o-keyframes rotateOut
-  0%
-    transform-origin: center center
-    transform: rotate(0)
-    opacity: 1
-  100%
-    transform-origin: center center
-    transform: rotate(200deg)
-    opacity: 0
-
-@-o-keyframes tada
-  0%
-    transform: scale(1)
-  10%
-    transform: scale(0.9) rotate(-3deg)
-  20%
-    transform: scale(0.9) rotate(-3deg)
-  30%
-    transform: scale(1.1) rotate(3deg)
-  40%
-    transform: scale(1.1) rotate(-3deg)
-  50%
-    transform: scale(1.1) rotate(3deg)
-  60%
-    transform: scale(1.1) rotate(-3deg)
-  70%
-    transform: scale(1.1) rotate(3deg)
-  80%
-    transform: scale(1.1) rotate(-3deg)
-  90%
-    transform: scale(1.1) rotate(3deg)
-  100%
-    transform: scale(1) rotate(0)
-
 @keyframes fadeIn
   0%
     opacity: 0
@@ -2145,3 +1807,138 @@
     transform: scale(1.1) rotate(3deg)
   100%
     transform: scale(1) rotate(0)
+
+.animate-fadeIn
+  +animate( fadeIn )
+
+.animate-fadeOut
+  +animate( fadeOut )
+
+.animate-fadeInUp
+  +animate( fadeInUp )
+
+.animate-fadeOutUp
+  +animate( fadeOutUp )
+
+.animate-fadeInDown
+  +animate( fadeInDown )
+
+.animate-fadeOutDown
+  +animate( fadeOutDown )
+
+.animate-fadeInRight
+  +animate( fadeInRight )
+
+.animate-fadeOutRight
+  +animate( fadeOutRight )
+
+.animate-fadeInLeft
+  +animate( fadeInLeft )
+
+.animate-fadeOutLeft
+  +animate( fadeOutLeft )
+
+.animate-fadeInBig
+  +animate( fadeInBig )
+
+.animate-fadeOutBig
+  +animate( fadeOutBig )
+
+.animate-fadeInUpBig
+  +animate( fadeInUpBig )
+
+.animate-fadeOutUpBig
+  +animate( fadeOutUpBig )
+
+.animate-fadeInDownBig
+  +animate( fadeInDownBig )
+
+.animate-fadeOutDownBig
+  +animate( fadeOutDownBig )
+
+.animate-fadeInRightBig
+  +animate( fadeInRightBig )
+
+.animate-fadeOutRightBig
+  +animate( fadeOutRightBig )
+
+.animate-fadeInLeftBig
+  +animate( fadeInLeftBig )
+
+.animate-fadeOutLeftBig
+  +animate( fadeOutLeftBig )
+
+.animate-bounceIn
+  +animate( bounceIn )
+
+.animate-bounceInDown
+  +animate( bounceInDown )
+
+.animate-bounceInUp
+  +animate( bounceInUp )
+
+.animate-bounceInLeft
+  +animate( bounceInLeft )
+
+.animate-bounceInRight
+  +animate( bounceInRight )
+
+.animate-bounceOut
+  +animate( bounceOut )
+
+.animate-bounceOutDown
+  +animate( bounceOutDown )
+
+.animate-bounceOutUp
+  +animate( bounceOutUp )
+
+.animate-bounceOutLeft
+  +animate( bounceOutLeft )
+
+.animate-bounceOutRight
+  +animate( bounceOutRight )
+
+.animate-bounce
+  +animate( bounce )
+
+.animate-flash
+  +animate( flash )
+
+.animate-shake
+  +animate( shake )
+
+.animate-rotateInDownLeft
+  +animate( rotateInDownLeft )
+
+.animate-rotateInUpLeft
+  +animate( rotateInUpLeft )
+
+.animate-rotateInUpRight
+  +animate( rotateInUpRight )
+
+.animate-rotateInDownRight
+  +animate( rotateInDownRight )
+
+.animate-rotateOutDownLeft
+  +animate( rotateOutDownLeft )
+
+.animate-rotateOutUpLeft
+  +animate( rotateOutUpLeft )
+
+.animate-rotateOutDownRight
+  +animate( rotateOutDownRight )
+
+.animate-rotateOutUpRight
+  +animate( rotateOutUpRight )
+
+.animate-rotateIn
+  +animate( rotateIn )
+
+.animate-rotateOut
+  +animate( rotateOut )
+
+.animate-swing
+  +animate( swing )
+
+.animate-tada
+  +animate( tada )
