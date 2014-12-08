@@ -1,7 +1,10 @@
 //Animate Mixin Plugin
 
-=animate($name: fadeIn, $duration: 1s, $delay: .2s, $function: ease, $mode: both)
-  +experimental(animation, $name $duration $delay $function $mode)
+@mixin animate($name: fadeIn, $duration: 1s, $delay: .2s, $function: ease, $mode: both)
+  -webkit-animation: $name $duration $delay $function $mode
+  -moz-animation: $name $duration $delay $function $mode
+  -ms-animation: $name $duration $delay $function $mode
+  animation: $name $duration $delay $function $mode
 
 @mixin animation( $s )
   -webkit-animation: $s
