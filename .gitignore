@@ -10,3 +10,6 @@
 node_modules
 assets/js/package.js
 assets/css/main.css
+assets/dist/*.js
+assets/dist/*.css
+assets/dist/*.map

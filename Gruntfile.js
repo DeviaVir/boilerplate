@@ -7,7 +7,7 @@ module.exports = function(grunt) {
           compass: true
         },
         files: {
-          'assets/css/main.css' : 'assets/sass/main.sass'
+          'assets/dist/main.css' : 'assets/sass/main.sass'
         }
       }
     },
@@ -18,12 +18,10 @@ module.exports = function(grunt) {
       },
       frontend: {
         files: [
-          './assets/js/vendor/jquery-1.10.2.min.js',
-          './assets/js/vendor/modernizr-2.6.2.min.js',
-          './assets/js/main.js',
-          './assets/js/plugins.js'
+          './assets/js/vendor/*.js',
+          './assets/js/*.js'
         ],
-        tasks: ['concat:frontend','uglify:frontend'],
+        tasks: ['concat:frontend'],
         options: {
           livereload: true
         }
@@ -35,12 +33,10 @@ module.exports = function(grunt) {
       },
       frontend: {
         src: [
-          './assets/js/vendor/jquery-1.10.2.min.js',
-          './assets/js/vendor/modernizr-2.6.2.min.js',
-          './assets/js/main.js',
-          './assets/js/plugins.js'
+          './assets/js/vendor/*.js',
+          './assets/js/*.js'
         ],
-        dest: './assets/js/package.js',
+        dest: './assets/dist/package.js',
       },
     },
     uglify: {
@@ -49,7 +45,7 @@ module.exports = function(grunt) {
       },
       frontend: {
         files: {
-          './assets/js/package.js': './assets/js/package.js',
+          './assets/dist/package.js': './assets/dist/package.js',
         }
       }
     }
@@ -61,4 +57,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('build', ['concat:frontend', 'uglify:frontend']);
 };
