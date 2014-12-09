@@ -9,14 +9,27 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
     <title>Boilerplate by DeviaVir</title>
+
+    <style>
+      code {
+        padding: 0.2em 0px;
+        margin: 0px;
+        font-size: 85%;
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 3px;
+        word-wrap: break-word;
+        color: #f0f0f0;
+        font: 14px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+      }
+    </style>
   </head>
 
   <body>
 
     <header>
       <div class="container">
-        <h1>Boilerplate</h1>
-        <h2>My personal boilerplate with commonly used libraries and set-up.</h2>
+        <h1>boilerplate</h1>
+        <h2>My personal (frontend) boilerplate with commonly used libraries and set-up.</h2>
 
         <section id="downloads">
           <a href="https://github.com/DeviaVir/boilerplate/zipball/master" class="btn">Download as .zip</a>
@@ -28,37 +41,53 @@
 
     <div class="container">
       <section id="main_content">
-        <h3>Website Boilerplate</h3>
-
 <p>This boilerplate helps the SASS/HTML5/CSS3/JavaScript dev to simply clone this repo and get to the coding immediately</p>
+<br />
+<img src="https://cloud.githubusercontent.com/assets/777823/5355984/7ee06b6e-7f98-11e4-8721-8556cd015241.png" alt="Ready for action" title="Ready for action" />
+<br />
+<h3>Installation</h3>
 
-<h3>My workflow</h3>
-
-<ul>
-<li>Receive design PSD/examples</li>
-<li>
-<a href="http://compass.handlino.com/">http://compass.handlino.com/</a> Use fire.app or compass.app</li>
-<li>Clone repo</li>
-<li>Watch base folder with compass or fire</li>
-<li>Edit index.html &amp; assets/sass/ files</li>
-</ul><h3>Included</h3>
+<p>Follow the steps below to have your (frontend) boilerplate up and ready to start coding.</p>
 
 <ul>
-<li><a href="http://selectivizr.com/">Selectivizr</a></li>
-<li><a href="https://github.com/scottjehl/Respond">respond.js</a></li>
-<li><a href="http://modernizr.com/">Modernizr</a></li>
+<li>Download (forking, direct download, cloning) the project to your local machine</li>
+<li>Run <code>npm install</code> on the source directory to install all the devDependencies (for running grunt)</li>
+<li>Make sure you have grunt installed (<code>npm install -g grunt</code>)</li>
+<li>Simply run <code>grunt</code></li>
+<li>Make changes to CSS/JS and see grunt automatically concatenate the SASS and JS into the assets/dist/ folder</li>
+<li>When done making changes, run <code>grunt build</code> and upload these files</li>
+</ul>
+
+<h3>Modules</h3>
+
+<p>Included modules in CSS:</p>
+
+<ul>
+<li><a href="http://html5boilerplate.com/">H5BP</a></li>
+<li><a href="http://necolas.github.io/normalize.css/">Normalize</a></li>
 <li><a href="http://formalize.me/">Formalize</a></li>
-<li><a href="http://jquery.com/">jQuery</a></li>
-</ul><h3>Tech</h3>
+<li><a href="http://thecssguru.freeiz.com/animate/">Animations</a></li>
+<li><a href="http://fortawesome.github.io/Font-Awesome/">Fontawesome</a></li>
+<li><a href="https://github.com/mrmrs/colors">Colors</a></li>
+</ul>
+
+<p>Included modules in JS:</p>
 
 <ul>
-<li>HTML5</li>
-<li>CSS3 (animations included)</li>
-</ul><h3>Me</h3>
+<li><a href="http://jquery.com/">jQuery</a></li>
+<li><a href="http://modernizr.com/">Modernizr</a></li>
+<li><a href="https://github.com/scottjehl/Respond">Respond.js</a></li>
+<li><a href="http://selectivizr.com/">selectivizr</a></li>
+<li><a href="http://formalize.me/">Formalize</a></li>
+</ul>
+
+<h3>After care</h3>
+
+<ul>
+<li>Generate all the (fav)icons you'll ever need <a href="http://realfavicongenerator.net/">here</a></li>
+</ul>
 
 <p>I am <a href="http://chase.sillevis.net/">Chase Sillevis</a>.</p>
-
-<p>Think I can help you out? Shoot me a mail at <a href="mailto:chase@sillevis.net">chase@sillevis.net</a></p>
       </section>
     </div>
 
