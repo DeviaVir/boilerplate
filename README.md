@@ -1,3 +1,5 @@
+![Ready for action](https://cloud.githubusercontent.com/assets/777823/5355984/7ee06b6e-7f98-11e4-8721-8556cd015241.png)
+
 # Installation
 
 Follow the steps below to have your (frontend) boilerplate up and ready to start coding.
