@@ -19,7 +19,7 @@ Included modules in CSS:
 * [Normalize](http://necolas.github.io/normalize.css/)
 * [Formalize](http://formalize.me/)
 * [Animations](http://thecssguru.freeiz.com/animate/)
-* [Fontawesome](http://thecssguru.freeiz.com/animate/)
+* [Fontawesome](http://fortawesome.github.io/Font-Awesome/)
 * [Colors](https://github.com/mrmrs/colors)
 
 Included modules in JS:
