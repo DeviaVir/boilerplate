@@ -1,13 +1,12 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-
 .DS_Store
 .DS_Store?
 ._*
+
 .sass-cache
-.sass-cache?
-.sass-cache/
 node_modules
+
 assets/js/package.js
 assets/css/main.css
 assets/dist/*.js
