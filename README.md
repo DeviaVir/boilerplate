@@ -2,6 +2,8 @@
 
 # Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/DeviaVir/boilerplate.svg)](https://greenkeeper.io/)
+
 Follow the steps below to have your (frontend) boilerplate up and ready to start coding.
 
 * Download (forking, direct download, cloning) the project to your local machine
